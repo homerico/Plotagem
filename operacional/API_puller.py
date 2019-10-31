@@ -1,14 +1,13 @@
 # Arquivo para atualizar o conteudo
-import os.path
-import urllib.request
-
+import os
+import urllib.request as rqst
+import Path_finder as pf
 
 # Para adquirir o caminho do local certo para colocar o .csv:
-current_path = os.path.dirname(__file__)
-new_path = os.path.relpath('../conteudo/cotacao.csv', current_path)
+path = pf.find('cotacao.csv','/home/homerico/Documentos/POO2/Plotagem')
 
-with open(new_path, 'w') as fin:
+with open(path, 'w') as fin:
     url = 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=' \
           'MSFT&interval=5min&apikey=YIG0BW9UI8N4X0ZH&datatype=csv'
-    content = urllib.request.urlopen(url)
+    content = rqst.urlopen(url)
     fin.write(content.read().decode('utf-8'))
