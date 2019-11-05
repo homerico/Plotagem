@@ -10,7 +10,7 @@ import Path_finder as pf
 # Criar keys aleatórias
 def random_key(key_length=16):
     letters = string.ascii_uppercase
-    numbers = '0123456789'
+    numbers = string.digits
     key_base = letters + numbers
     return ''.join(random.choice(key_base) for i in range(key_length))
 
