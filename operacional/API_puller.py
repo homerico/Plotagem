@@ -14,7 +14,7 @@ def random_key(key_length=16):
     return ''.join(random.choice(key_base) for i in range(key_length))
 
 # Puxa o conteudo da API e armazena no arquivo de nome desejado, caso não exista esse arquivo, é criado na mesma função.
-def pull(key=random_key(), function='TIME_SERIES_INTRADAY', datatype='csv', symbol='MSFT', **kwargs):
+def pull(key=random_key(), function='TIME_SERIES_DAILY', datatype='csv', symbol='MSFT', **kwargs):
 
     # Se um arquivo já foi criado, vai ser pego o caminho dele, caso contrário será criado um caminho para esse arquivo novo.
     try:
@@ -33,3 +33,4 @@ def pull(key=random_key(), function='TIME_SERIES_INTRADAY', datatype='csv', symb
     with open(path, 'w') as fin:
         content = rqst.urlopen(url)
         fin.write(content.read().decode('utf-8'))
+    return function
