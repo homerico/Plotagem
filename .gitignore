@@ -1,0 +1,5 @@
+# ARQUIVOS DA API #
+*.csv
+
+# Cache do python #
+*.pyc
