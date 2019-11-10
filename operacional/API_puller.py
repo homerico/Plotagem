@@ -4,7 +4,7 @@ import string
 import urllib.request as rqst
 
 # Outros arquivos
-import Path_finder as pf
+import Plotagem.operacional.Path_finder as pf
 
 # Cria keys aleatórias
 def random_key(key_length=16):
