@@ -8,6 +8,10 @@ Data de entrega: 10/11/2019.
 - Os dados dos ativos deverão ser coletados da API [Alphavantage](alphavantage.co);
 - Deverão ser plotados 4 gráficos com 3 métricas cada um (ex de métrica: volume, média móvel, fechamento e abertura).
 
+## INFORMAÇÕES INICIAIS
+
+- Cotação da Microsoft - MSFT (NASDAQ)
+
 ## MODO DE USO
 
                                             EM CONSTRUÇÃO
