@@ -13,8 +13,8 @@ import pandas as pd
 register_matplotlib_converters()
 
 # Outros scripts:
-import Path_finder as pf
-import API_puller as ap
+import Plotagem.operacional.Path_finder as pf
+import Plotagem.operacional.API_puller as ap
 
 class App(Tk):
     def __init__(self):
@@ -75,7 +75,7 @@ class App(Tk):
         #canvas2.get_tk_widget().grid(row=1, column=0)
         #canvas2.get_tk_widget().pack(side=RIGHT, fill=BOTH, expand=False)
 
-if __name__ == "__main__":
+if __name__ != "__main__":
     app = App()
     canvas_candle = app.get_canvas(data_candle=app.data)
     canvas_candle.get_tk_widget().grid(row=0,column=0)
